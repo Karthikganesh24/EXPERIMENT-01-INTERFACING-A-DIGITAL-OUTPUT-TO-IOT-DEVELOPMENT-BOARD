@@ -1,13 +1,13 @@
 # EXPERIMENT-01-INTERFACING-A-DIGITAL-OUTPUT-TO-IOT-DEVELOPMENT-BOARD
 
 
-**DATE:**
+**DATE: 3/2/2026**
 
-**NAME:**
+**NAME: Karthik ganesh G**
 
-**ROLL NO:**
+**ROLL NO: 212223223003**
 
-**DEPARTMENT:**
+**DEPARTMENT: IT**
 
 ## Aim
 
@@ -97,12 +97,26 @@ With its power-efficient design, built-in LoRaWAN support, and flexible communic
 
 
 ## STM 32 CUBE PROGRAM
+int main(void)
+{
+  HAL_Init();
 
-```
-// Your STM 32 CUBE Program code here
-```
+  SystemClock_Config();
 
+  MX_GPIO_Init();
+
+  while (1)
+  {
+	  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_RESET);
+	  HAL_Delay(3000);
+	  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_SET);
+	  HAL_Delay(3000);
+  }
+}
 ## OUTPUT
+![WhatsApp Image 2026-02-06 at 10 59 36 AM (2)](https://github.com/user-attachments/assets/9f87846d-b42e-4bde-b6b8-877327ff5219)
+
+![WhatsApp Image 2026-02-06 at 10 59 37 AM](https://github.com/user-attachments/assets/94fb4683-6d65-47e4-aa14-05e26ec670f1)
 
 ## Result
 
