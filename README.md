@@ -1,7 +1,6 @@
 # EXPERIMENT-01-INTERFACING-A-DIGITAL-OUTPUT-TO-IOT-DEVELOPMENT-BOARD
 
-
-**DATE: 3/2/2026**
+**DATE: 02/02/2026**
 
 **NAME: Karthik ganesh G**
 
@@ -97,26 +96,32 @@ With its power-efficient design, built-in LoRaWAN support, and flexible communic
 
 
 ## STM 32 CUBE PROGRAM
+
+```c
+#include "main.h"
+void SystemClock_Config(void);
+static void MX_GPIO_Init(void);
 int main(void)
 {
-  HAL_Init();
-
-  SystemClock_Config();
-
-  MX_GPIO_Init();
-
-  while (1)
+HAL_Init();
+SystemClock_Config();
+MX_GPIO_Init();
+while (1)
   {
-	  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_RESET);
-	  HAL_Delay(3000);
-	  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_SET);
-	  HAL_Delay(3000);
-  }
+	  HAL_GPIO_WritePin(GPIOA,GPIO_PIN_0,GPIO_PIN_SET);
+	  HAL_Delay(5000);
+	  HAL_GPIO_WritePin(GPIOA,GPIO_PIN_0,GPIO_PIN_RESET);
+	  HAL_Delay(0000);
+  }
 }
-## OUTPUT
-![WhatsApp Image 2026-02-06 at 10 59 36 AM (2)](https://github.com/user-attachments/assets/9f87846d-b42e-4bde-b6b8-877327ff5219)
+```
 
-![WhatsApp Image 2026-02-06 at 10 59 37 AM](https://github.com/user-attachments/assets/94fb4683-6d65-47e4-aa14-05e26ec670f1)
+## OUTPUT
+### Relay On:
+<img width="1482" height="1600" alt="image" src="https://github.com/user-attachments/assets/59cd0a33-cdb3-41d2-8aa9-ac3b07eaca7f" />
+
+### Relay Off:
+<img width="1498" height="1600" alt="image" src="https://github.com/user-attachments/assets/c9e5eb92-3185-438d-8af0-ef87cff03809" />
 
 ## Result
 
